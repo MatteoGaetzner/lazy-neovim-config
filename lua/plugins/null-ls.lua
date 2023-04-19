@@ -9,6 +9,7 @@ return {
                 nls.builtins.diagnostics.fish,
                 nls.builtins.formatting.stylua,
                 nls.builtins.formatting.black,
+                nls.builtins.formatting.isort,
                 nls.builtins.formatting.shfmt,
             },
         }
