@@ -14,12 +14,12 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Moving lines
-map("n", "<C-J>", ":move .+1<CR>==", { desc = "Move line up" })
-map("n", "<C-K>", ":move .-2<CR>==", { desc = "Move line down" })
-map("i", "<C-J>", "<Esc>:move .+1<CR>==gi", { desc = "Move line up" })
-map("i", "<C-K>", "<Esc>:move .-2<CR>==gi", { desc = "Move line down" })
-map("v", "<C-J>", ":move '>+1<CR>gv=gv", { desc = "Move line up" })
-map("v", "<C-K>", ":move '<-2<CR>gv=gv", { desc = "Move line down" })
+map("n", "<C-J>", ":move .+1<CR>==", { desc = "move line up" })
+map("n", "<C-K>", ":move .-2<CR>==", { desc = "move line down" })
+map("i", "<C-J>", "<Esc>:move .+1<CR>==gi", { desc = "move line up" })
+map("i", "<C-K>", "<Esc>:move .-2<CR>==gi", { desc = "move line down" })
+map("v", "<C-J>", ":move '>+1<CR>gv=gv", { desc = "move line up" })
+map("v", "<C-K>", ":move '<-2<CR>gv=gv", { desc = "move line down" })
 
 -- Close tab
 map("n", "<leader>d", "<cmd>bd<cr>", { desc = "Close Tab" })
@@ -44,3 +44,9 @@ map("n", "M", "D", { desc = "visual mode cut" })
 
 -- Replace text with contents of register (visual mode)
 map("v", "gr", '"_dP', { noremap = true, silent = true, desc = "replace with contents of register" })
+
+-- Latex
+map("n", "<leader>lf", ":lua FormatLatex()<CR>", { desc = "format file using latexindent" })
+
+map("n", "<leader>cc", ":VimtexCompile<cr>", { desc = "compile LaTeX document" })
+map("x", "<leader>cc", ":VimtexCompile<cr>", { desc = "compile LaTeX document" })

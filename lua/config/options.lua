@@ -16,5 +16,8 @@ vim.g.clipboard = {
     paste = { ["+"] = paste, ["*"] = paste },
 }
 
--- Python environments
-vim.g.python3_host_prog = "~/.conda/envs/neovim-python3/bin/python3"
+-- NOTE: Set this path to the path to your python3 executable!
+vim.g.python3_host_prog = "~/.mambaforge/envs/neovim/bin/python3"
+
+-- NOTE: Set this path to the path to your perl executable!
+vim.g.perl_host_prog = "/usr/bin/perl"
