@@ -25,3 +25,11 @@ vim.g.perl_host_prog = "/usr/bin/perl"
 
 -- Textwidth (following PEP 8)
 vim.opt.textwidth = 79
+
+-- Set backup directory to ~/.cache/nvim/backup
+local backupdir = vim.fn.expand("~/.cache/nvim/backup")
+vim.fn.mkdir(backupdir, "p") -- Create the directory if it doesn't exist
+
+-- Configure Neovim to use the specified backup directory
+vim.opt.backupdir = { backupdir }
+vim.opt.directory = { backupdir }

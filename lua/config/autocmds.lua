@@ -13,7 +13,7 @@ function FormatLatex()
     local content = table.concat(lines, "\n")
 
     -- Step 2: Run latexindent on the contents of the buffer
-    local cmd = "latexindent -y=defaultIndent:'  '"
+    local cmd = "latexindent --cruft='/tmp/' -y=defaultIndent:'  '"
     local output = vim.fn.system(cmd, content)
     local success = vim.v.shell_error == 0
 
