@@ -5,6 +5,8 @@ return {
             "stylua",
             "shfmt",
             "black",
+            "rustfmt",
+            "rust-analyzer",
         },
     },
 }

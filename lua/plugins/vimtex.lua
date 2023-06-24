@@ -6,7 +6,8 @@ return {
             options = {
                 "-outdir=./.build",
                 "-pdf",
-                '-pdflatex="xelatex -synctex=1 -interaction=nonstopmode -file-line-error"',
+                '-pdflatex="pdflatex -synctex=1 -interaction=nonstopmode -file-line-error"',
+                -- '-pdflatex="lualatex -synctex=1 -interaction=nonstopmode -file-line-error"',
                 "-shell-escape",
             },
         }
